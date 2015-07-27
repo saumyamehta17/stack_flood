@@ -1,0 +1,16 @@
+<div style='max-height: 25%'></div>
+<div id='new_post'>
+<%= simple_form_for(@post) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :desc, label: 'Explain' %>
+    <%= hidden_field_tag 'post[type]', 'Question' %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, value: 'Post Your Question' %>
+  </div>
+<% end %>
+</div>

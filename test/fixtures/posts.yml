@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  last_edit_edit: 2015-06-01 07:37:30
+  type: 
+  user_id_id: 
+
+two:
+  title: MyString
+  last_edit_edit: 2015-06-01 07:37:30
+  type: 
+  user_id_id: 

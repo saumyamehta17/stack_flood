@@ -1,0 +1,18 @@
+<%= will_paginate @posts %>
+<div style="height: 25px;"></div>
+<table style="  margin-left: 5%;">
+  <tbody>
+  <%# cache @posts do %>
+      <% @posts.where(type: 'Question').each_with_index do |que,i| %>
+          <tr style="background-color: gainsboro;">
+            <td style="font-weight: bold">Question: <%= i + 1 %> About <%= que.title %> ?</td>
+          </tr>
+          <% current_user.answers.where(parent_id: que.id).each_with_index do |ans,j| %>
+              <tr style="background-color: lightgoldenrodyellow;">
+                <td style=" padding: 10px;">Answer:<%= j + 1 %> <%= ans.title %></td>
+              </tr>
+          <% end %>
+      <% end %>
+  <%# end %>
+  </tbody>
+</table>
