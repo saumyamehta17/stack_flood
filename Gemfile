@@ -52,9 +52,11 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'
-  #gem 'annotate'
+  gem 'byebug'
+  gem 'annotate'
+  gem 'xray-rails'
 end
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
+# gem 'debugger', group: [:development, :test]
 

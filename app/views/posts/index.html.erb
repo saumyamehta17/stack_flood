@@ -5,7 +5,11 @@
   <%# cache @posts do %>
       <% @posts.each_with_index do |que,i| %>
           <tr style="background-color: gainsboro;">
-            <td style="font-weight: bold">Question: <%= i + 1 %> About <%= que.title %> ?</td>
+            <td style="font-weight: bold">
+            <%= link_to que do %>
+              Question: <%= i + 1 %> About <%= que.title %> ?
+            <% end %>
+            </td>
           </tr>
           <% Answer.where(parent_id: que.id).each_with_index do |ans,j| %>
               <tr style="background-color: lightgoldenrodyellow;">
