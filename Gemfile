@@ -51,7 +51,7 @@ group :development do
   gem 'capistrano-passenger'
   gem 'better_errors'
   gem 'binding_of_caller'
-  #gem 'bullet'
+  gem 'bullet'
   #gem 'annotate'
 end
 

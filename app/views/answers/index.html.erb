@@ -1,0 +1,17 @@
+<%= will_paginate @answers %>
+<div style="height: 25px;"></div>
+<table style="  margin-left: 5%;">
+  <tbody>
+  <% @answers.each_with_index do |ans,i| %>
+      <tr style="background-color: gainsboro;">
+        <td style="font-weight: bold">Answer: <%= i + 1 %> About <%= ans.title %> .</td>
+      </tr>
+      <tr><td style="font-weight: bold"><%= pluralize ans.comments.size, 'comment' %></td></tr>
+      <% ans.comments.each_with_index do |comment,j| %>
+          <tr style="background-color: lightgoldenrodyellow;">
+            <td style=" padding: 10px;">Comment:<%= j + 1 %> <%= comment.desc %></td>
+          </tr>
+      <% end %>
+  <% end %>
+  </tbody>
+</table>

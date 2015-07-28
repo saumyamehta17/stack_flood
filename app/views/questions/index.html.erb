@@ -1,0 +1,11 @@
+<%= will_paginate @questions %>
+<div style="height: 25px;"></div>
+<table style="  margin-left: 5%;">
+  <tbody>
+  <% @questions.each_with_index do |ans,i| %>
+      <tr style="background-color: gainsboro;">
+        <td style="font-weight: bold">Question: <%= i + 1 %> About <%= ans.title %> .</td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>

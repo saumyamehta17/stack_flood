@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   respond_to :html
 
   def index
-    @posts = Post.paginate(page: params[:page], per_page: 20)
+    @posts = Post.where(type: 'Question').paginate(page: params[:page], per_page: 20)
     #respond_with(@posts)
   end
 
