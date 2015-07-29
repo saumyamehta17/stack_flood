@@ -55,6 +55,7 @@ group :development do
   gem 'byebug'
   gem 'annotate'
   gem 'xray-rails'
+  gem 'rack-mini-profiler'
 end
 
 # Use debugger

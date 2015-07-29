@@ -2,8 +2,9 @@
 <div style="height: 25px;"></div>
 <table style="  margin-left: 5%;">
   <tbody>
-  <%# cache @posts do %>
+
       <% @posts.each_with_index do |que,i| %>
+        <% cache [:list, que] do %>
           <tr style="background-color: gainsboro;">
             <td style="font-weight: bold">
             <%= link_to que do %>
@@ -17,6 +18,6 @@
               </tr>
           <% end %>
       <% end %>
-  <%# end %>
+  <% end %>
   </tbody>
 </table>

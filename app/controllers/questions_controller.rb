@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
   end
 
   def new
-    @question = question.new
+    @question = Question.new
     respond_with(@question)
   end
 
@@ -21,7 +21,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = question.new(question_params)
+    @question = Question.new(question_params)
     @question.save
     respond_with(@question)
   end
@@ -37,11 +37,11 @@ class QuestionsController < ApplicationController
   end
 
   private
-  def set_question
-    @question = question.find(params[:id])
-  end
+    def set_question
+      @question = Question.cached_find(params[:id])
+    end
 
-  def question_params
-    params.require(:question).permit(:title, :desc, :type)
-  end
+    def question_params
+      params.require(:question).permit(:title, :desc, :type)
+    end
 end

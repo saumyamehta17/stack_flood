@@ -1,4 +1,8 @@
 class Question < Post
+
+  def cached_find(id)
+    Rails.cache.fetch([self, id]) { find(id) }
+  end
 end
 
 # == Schema Information
