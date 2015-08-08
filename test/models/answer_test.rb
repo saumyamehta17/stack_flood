@@ -1,6 +1,9 @@
-class Answer < ActiveRecord::Base
-  belongs_to :question
-  has_many :comments
+require 'test_helper'
+
+class AnswerTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end
 
 # == Schema Information

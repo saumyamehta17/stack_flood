@@ -1,10 +1,9 @@
-class Question < ActiveRecord::Base
-  belongs_to :user
-  has_many :answers
+require 'test_helper'
 
-  def self.cached_find(id)
-    Rails.cache.fetch([self, id]) { find(id) }
-  end
+class QuestionTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end
 
 # == Schema Information

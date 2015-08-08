@@ -1,11 +1,14 @@
-class Question < ActiveRecord::Base
-  belongs_to :user
-  has_many :answers
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-  def self.cached_find(id)
-    Rails.cache.fetch([self, id]) { find(id) }
-  end
-end
+one:
+  title: MyString
+  user_id: 
+  desc: MyText
+
+two:
+  title: MyString
+  user_id: 
+  desc: MyText
 
 # == Schema Information
 #

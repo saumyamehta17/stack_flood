@@ -2,9 +2,12 @@
 <div style="height: 25px;"></div>
 <table style="  margin-left: 5%;">
   <tbody>
-  <% @questions.each_with_index do |ans,i| %>
+  <% @questions.each_with_index do |que,i| %>
       <tr style="background-color: gainsboro;">
-        <td style="font-weight: bold">Question: <%= i + 1 %> About <%= ans.title %> .</td>
+        <td style="font-weight: bold">
+          <%= link_to que do  %>
+              Question: <%= i + 1 %> About <%= que.title %> .</td>
+          <% end %>
       </tr>
       <% end %>
   </tbody>

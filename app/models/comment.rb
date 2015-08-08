@@ -1,6 +1,6 @@
-class Comment < ActiveRecord::Base
-  belongs_to :post
-end
+  class Comment < ActiveRecord::Base
+    belongs_to :post
+  end
 
 # == Schema Information
 #

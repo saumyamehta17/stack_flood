@@ -1,7 +1,14 @@
-class Answer < ActiveRecord::Base
-  belongs_to :question
-  has_many :comments
-end
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  question_id: 
+  desc: MyText
+
+two:
+  title: MyString
+  question_id: 
+  desc: MyText
 
 # == Schema Information
 #

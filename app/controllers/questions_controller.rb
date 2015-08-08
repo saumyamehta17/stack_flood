@@ -23,6 +23,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     @question.save
+    AnswerWorker.perform_async(@question.id)
     respond_with(@question)
   end
 
@@ -37,11 +38,11 @@ class QuestionsController < ApplicationController
   end
 
   private
-    def set_question
-      @question = Question.cached_find(params[:id])
-    end
+  def set_question
+    @question = Question.cached_find(params[:id])
+  end
 
-    def question_params
-      params.require(:question).permit(:title, :desc, :type)
-    end
+  def question_params
+    params.require(:question).permit(:title, :desc, :type)
+  end
 end
