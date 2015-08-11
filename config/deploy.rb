@@ -15,7 +15,7 @@ set :rvm_type, :user
 # set :rvm_ruby_string, '2.0.0'             # ruby version you are using...
 set :rvm_ruby_version, '2.0.0'
 # server "45.55.144.140", [:app, :web, :db, :primary => true]
-set :user, 'sweety' #fizzy
+set :user, 'sweety'
 # set :repository, "https://github.com/sweetymehta/stack_flood.git"
 set :use_sudo, true
 
